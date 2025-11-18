@@ -1,5 +1,5 @@
 Option Explicit
-
+' Not Using
 ' Prompt user to select an evidence folder
 Function PickEvidenceFolder() As String
     Dim fd As FileDialog
