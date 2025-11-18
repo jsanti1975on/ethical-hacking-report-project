@@ -15,3 +15,24 @@ A fully local, VBA-driven system for generating structured daily wrap-up reports
 | `01_enum.png`   | `Nmap scan result`  |
 | `02_shell.png`  | `Meterpreter shell` |
 | ...             | ...                 |
+
+# The above is working - and will evolve. The pdf macro needs testing - Push report to a pdf.
+```vba
+    ' === Export to PDF ===
+`ImportScreenshotsFromExcel` => Is the first working procedure. Dial in on a file naming scheme for greenshot. => Push to webDav or home sharepoint server and PowerAutomate
+    Dim pdfPath As String
+    pdfPath = ThisDocument.Path & "\" & _
+              Replace(ThisDocument.Name, ".docm", "_" & Format(Now, "yyyy-mm-dd_hhmmss") & ".pdf")
+
+    ThisDocument.ExportAsFixedFormat OutputFileName:=pdfPath, _
+        ExportFormat:=wdExportFormatPDF, _
+        OpenAfterExport:=True, _
+        OptimizeFor:=wdExportOptimizeForPrint, _
+        Range:=wdExportAllDocument, _
+        Item:=wdExportDocumentContent, _
+        IncludeDocProps:=True, _
+        CreateBookmarks:=wdExportCreateHeadingBookmarks
+
+    MsgBox " PDF saved to: " & pdfPath, vbInformation
+
+```
