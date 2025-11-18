@@ -9,3 +9,9 @@ A fully local, VBA-driven system for generating structured daily wrap-up reports
 # Start of Project
 <img width="758" height="503" alt="version-1" src="https://github.com/user-attachments/assets/649a0bb4-6659-436d-9e65-1e5d6461e456" />
 
+| A               | B                   |
+| --------------- | ------------------- |
+| Screenshot File | Caption             |
+| `01_enum.png`   | `Nmap scan result`  |
+| `02_shell.png`  | `Meterpreter shell` |
+| ...             | ...                 |
