@@ -136,3 +136,15 @@ Developed as a utility tool for ethical hacking students and red team operators 
 
 ## 📁 Folder & File Structure
 
+```bash
+📦PentestReporting/
+├── DailyReport_Template.docm # Word report template
+├── Pentest_DailyLog.xlsx # Master Excel workbook
+├── Evidence/
+│ ├── 2025-11-17/
+│ │ ├── 01_meterpreter.png
+│ │ ├── 02_ldap.png
+│ │ └── 03_cred_dump.png
+│ └── ...
+└── README.md # This file
+```
