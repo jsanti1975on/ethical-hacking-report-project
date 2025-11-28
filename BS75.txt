@@ -1,0 +1,76 @@
+.encoding = "windows-1252"
+displayName = "BS75"
+config.version = "8"
+virtualHW.version = "21"
+firmware = "efi"
+guestOS = "windows2019srv-64"
+
+nvram = "BS75.nvram"
+extendedConfigFile = "BS75.vmxf"
+uuid.bios = "56 4d cb a6 be 2f ff 37-67 c0 05 33 61 f8 3c 29"
+uuid.location = "56 4d cb a6 be 2f ff 37-67 c0 05 33 61 f8 3c 29"
+
+# CPU and Memory
+numvcpus = "2"
+cpuid.coresPerSocket = "1"
+vcpu.hotadd = "TRUE"
+memsize = "4096"
+mem.hotadd = "TRUE"
+
+# Disks
+sata0.present = "TRUE"
+sata0.pciSlotNumber = "35"
+sata0:1.deviceType = "cdrom-raw"
+sata0:1.fileName = "auto detect"
+sata0:1.present = "TRUE"
+sata0:1.autodetect = "TRUE"
+sata0:1.clientDevice = "FALSE"
+sata0:1.startConnected = "FALSE"
+
+nvme0.present = "TRUE"
+nvme0.pciSlotNumber = "224"
+nvme0:0.fileName = "DC75-cl1.vmdk"
+nvme0:0.present = "TRUE"
+nvme0:0.redo = ""
+
+# Network - Static MAC for DHCP role
+ethernet0.present = "TRUE"
+ethernet0.pciSlotNumber = "160"
+ethernet0.virtualDev = "e1000e"
+ethernet0.addressType = "static"
+ethernet0.address = "00:0c:29:f8:3c:29"
+
+# Display / Sound
+svga.vramSize = "268435456"
+svga.guestBackedPrimaryAware = "TRUE"
+sound.present = "FALSE"
+
+# USB/Floppy (disabled unless needed)
+usb.present = "FALSE"
+ehci.present = "FALSE"
+usb_xhci.present = "FALSE"
+floppy0.present = "FALSE"
+
+# Misc
+tools.syncTime = "FALSE"
+tools.remindInstall = "FALSE"
+tools.capability.verifiedSamlToken = "TRUE"
+toolsInstallManager.updateCounter = "1"
+toolsInstallManager.lastInstallError = "0"
+
+vmci0.present = "TRUE"
+vmci0.id = "303857619"
+
+hpet0.present = "TRUE"
+monitor.phys_bits_used = "45"
+softPowerOff = "TRUE"
+
+vmxstats.filename = "DC75.scoreboard"
+checkpoint.vmState = ""
+checkpoint.vmState.readOnly = "FALSE"
+cleanShutdown = "TRUE"
+
+vm.genid = "8398853863107610784"
+vm.genidX = "8354278616171141478"
+
+guestInfo.detailed.data = "architecture='X86' bitness='64' buildNumber='17763' distroName='Windows' distroVersion='10.0' familyName='Windows' kernelVersion='17763.737' prettyName='Windows Server 2019, 64-bit (Build 17763.737)'"
